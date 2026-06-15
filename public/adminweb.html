@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Backend</title>
+    <link rel="stylesheet" href="styleback.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="loginOverlay">
+        <div id="loginBox">
+            <h2>เข้าสู่ระบบหลังบ้าน</h2>
+            <div id="loginError"></div>
+            <input type="password" id="loginPassword" placeholder="รหัสผ่าน" autocomplete="off" />
+            <button id="loginBtn">เข้าสู่ระบบ</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>เข้าถึงรายชื่อ<span style="color:#c40000; font-weight:600; text-decoration: underline;"> ยืมร่ม</span></h1>
+        <br>
+        <form id="problemForm">
+            <button type="submit">เปิด</button>
+        </form>
+        <div id="responseMessage"></div>
+    <br>
+        <h1>เข้าถึงรายชื่อ<span style="color:#c40000; font-weight:600; text-decoration: underline;"> สมัครติวเตอร์</span></h1>
+        <br>
+        <form id="TutorForm">
+            <button type="submit">เปิด</button>
+        </form>
+        <div id="responseMessage"></div>
+    <br>
+        <h1>เข้าถึงรายชื่อ<span style="color:#c40000; font-weight:600; text-decoration: underline;"> สมัครนักเรียน</span></h1>
+        <br>
+        <form id="StudyForm">
+            <button type="submit">เปิด</button>
+        </form>
+        <div id="responseMessage"></div>
+    </div>
+
+    <div class="footer">
+        © 2025 By Nontapat Sriha (Dear)
+    </div>
+
+    <script src="adscript.js"></script>
+
+</body>
+</html>

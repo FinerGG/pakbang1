@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายงานปัญหา | สภานักเรียน</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container">
+        <h1>รายงานปัญหาถึงสภานักเรียน</h1>
+        <p>กรุณากรอกรายละเอียดปัญหาที่พบ</p>
+        <form id="problemForm">
+        <label for="problemDescription">รายละเอียดปัญหา:</label>
+        <textarea id="problemDescription" name="problemDescription" rows="6" required></textarea>
+
+        <label for="problemImage">แนบรูปภาพ (ไม่บังคับ, สูงสุด 8MB):</label>
+            <input type="file" id="problemImage" name="problemImage" accept="image/*">
+            <button type="submit">ส่งรายงาน</button>
+        </form>
+        <div id="responseMessage"></div>
+        <br>
+        <!--<h3>ถ้าอยากยืมร่ม กดปุ่มด้านล่าง</h3>
+            <button
+                type="button"
+                class="umbrella-btn"
+                onclick="window.open('https://forms.gle/UxG7KkGk7gX6suUB6','_blank')">ยืมร่ม
+            </button>
+        -->
+    </div>
+
+    <div class="footer">
+        © 2025 By Nontapat Sriha (Dear)
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

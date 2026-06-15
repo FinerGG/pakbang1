@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mitr:wght@200;300;400;500;600;700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Basic Body and Background Styling */
+body {
+    background-color: darkblue; /* Fallback color */
+    animation: backgroundChange 20s infinite alternate; /* Background image animation */
+    background-size: cover; /* Scale image to cover the entire element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Ensure background does not repeat */
+    margin: 0;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: space-between; /* Push container to center, footer to bottom */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    font-family: 'Kanit', sans-serif; /* Set primary font */
+    color: #e3e3e3; /* Default text color */
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    font-family: kanit, sans-serif; /* Ensure consistent font */
+}
+
+/* Overlay for background dimming */
+body::before {
+    content: '';
+    position: fixed; /* Use fixed for full viewport coverage */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 14, 31, 0.7); /* Dark semi-transparent overlay */
+    z-index: -3; /* Place behind other content */
+}
+
+/* Background Image Animation Keyframes */
+@keyframes backgroundChange {
+    0% {
+        background-image: url('img/506350060_1027334576179942_7095521106453423238_n.jpg');
+    }
+    20% {
+        background-image: url('img/506599025_1027334539513279_1909077215026848273_n.jpg');
+    }
+    40% {
+        background-image: url('img/IMG_1988.jpg');
+    }
+    60% {
+        background-image: url('img/506339566_1027331322846934_7076795493696859925_n.jpg');
+    }
+    80% {
+        background-image: url('img/506137803_1027333229513410_3167079612446777365_n.jpg');
+    }
+    100% {
+        background-image: url('img/IMG_1997.jpg');
+    }
+    /*dsadsa*/
+    25% {
+        background-image: url('img/506752542_1027334406179959_5757960014923401273_n.jpg');
+    }
+    50% {
+        background-image: url('img/506132419_1027331596180240_9042813383854817158_n.jpg');
+    }
+    75% {
+        background-image: url('img/IMG_5081.jpg');
+    }
+}
+
+/* Main Container for the Form */
+.container {
+    margin-top: auto;
+    justify-content: center;   /* center vertically */
+    align-items: center;
+    max-width: 500px;
+    width: 70%; /* Use percentage for better responsiveness */
+    margin-bottom: auto;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.03); /* Very slight white background with transparency */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+    font-weight: 300;
+    box-sizing: border-box; /* Include padding in width calculation */
+    z-index: 3; /* Ensure it's above the overlay */
+}
+
+/* Heading and Paragraph Styling */
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: -20px;
+    color: #e3e3e3;
+    font-weight: 600; /* Make heading a bit bolder */
+}
+h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #e3e3e3;
+    font-weight: 400;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 1px;
+    font-size: 16px;
+    color: #a1a1a1;
+    line-height: 1.5; /* Improve readability */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px; /* Slightly more space */
+    color: #dbdbdb;
+    display: block; /* Ensure label takes full width */
+    font-family: kanit, sans-serif; /* Ensure label uses the same font */
+}
+
+/* Input Fields and Textarea Styling */
+input[type="text"],
+textarea {
+    padding: 12px; /* Slightly more padding */
+    font-size: 16px;
+    border: 1px solid #0a0a0a; /* Slightly darker border */
+    border-radius: 8px; /* More rounded corners */
+    margin-bottom: 20px;
+    background-color: #03001c; /* Dark background for inputs */
+    color: #ffffff;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); /* Inner shadow for depth */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Highlight on focus */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(0, 123, 255, 0.25); /* Glow effect */
+    outline: none; /* Remove default outline */
+}
+
+/* Placeholder text color */
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+textarea {
+    resize: vertical; /* Allow only vertical resizing */
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+/* File Input Styling (can be tricky to style uniformly across browsers) */
+input[type="file"] {
+    padding: 10px;
+    background-color: #03001c;
+    color: #ffffff;
+    border: 1px solid #0a0a0a;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #333333;
+}
+
+
+/* Submit Button Styling */
+button[type="submit"] {
+    padding: 14px; /* Slightly more padding */
+    font-size: 18px; /* Slightly larger font */
+    background-color: #1b1b1b; /* Darker background */
+    color: white;
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 15px; /* Stronger, darker shadow */
+    transition: all 0.3s ease;
+    font-weight: 600; /* Make button text bolder */
+    letter-spacing: 0.5px; /* Add slight letter spacing */
+    font-family: kanit, sans-serif; /* Ensure button uses the same font */
+}
+
+button[type="submit"]:hover {
+    background-color: #333333; /* Darker hover state */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 4px 20px; /* More prominent shadow on hover */
+}
+
+button[type="submit"]:active {
+    transform: translateY(0); /* Press effect */
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 10px;
+}
+
+/* Response Message Styling */
+#responseMessage {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    display: none; /* Hidden by default, controlled by JS */
+    opacity: 0; /* For fade in/out effect */
+    transition: opacity 0.3s ease;
+}
+
+#responseMessage.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    opacity: 1;
+}
+
+#responseMessage.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    opacity: 1;
+}
+
+.umbrella-btn {
+    background-color: darkblue;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 64px;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,0.7) 0px 0px 15px;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    margin: 20px auto 10px auto; /* ปุ่มจะอยู่ตรงกลาง */
+    letter-spacing: 0.5px;
+    display: block; /* ให้ปุ่มเป็น block เพื่อใช้ margin auto ได้ */
+}
+.umbrella-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: rgba(0,0,0,0.9) 0px 4px 20px;
+}
+
+/* Footer Styling */
+.footer {
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    padding: 15px 0; /* Add padding for better spacing */
+    color: #ffffff;
+    font-weight: 300;
+    z-index: 1; /* Ensure it's above the overlay */
+    width: 100%; /* Ensure footer spans full width */
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) { /* Adjusted breakpoint for more devices */
+    .container {
+        margin-top: 30px; /* Reduce top margin on smaller screens */
+        margin-bottom: 20px; /* Reduce bottom margin on smaller screens */
+        padding: 20px; /* Reduce padding */
+        width: 95%; /* Wider on smaller screens */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller heading */
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    label, input[type="text"], textarea, input[type="file"], button[type="submit"] {
+        font-size: 15px;
+        padding: 10px;
+        margin-bottom: 15px;
+        font-family: kanit, sans-serif; /* Ensure consistent font */
+    }
+
+    button[type="submit"] {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) { /* Even smaller screens */
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    label, input[type="text"], textarea, input[type="file"], button[type="submit"] {
+        font-size: 14px;
+        padding: 8px;
+        margin-bottom: 10px;
+        font-family: kanit, sans-serif; /* Ensure consistent font */
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 15px;
+    }
+  }
