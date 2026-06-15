@@ -33,34 +33,23 @@ body::before {
 
 /* Background Image Animation Keyframes */
 @keyframes backgroundChange {
-    0% {
-        background-image: url('img/506350060_1027334576179942_7095521106453423238_n.jpg');
+    0%, 100% {
+        background-image: url('img/656697775_1251482800431784_5017579042488295918_n.jpg');
     }
-    20% {
-        background-image: url('img/506599025_1027334539513279_1909077215026848273_n.jpg');
-    }
-    40% {
-        background-image: url('img/IMG_1988.jpg');
-    }
-    60% {
-        background-image: url('img/506339566_1027331322846934_7076795493696859925_n.jpg');
-    }
-    80% {
-        background-image: url('img/506137803_1027333229513410_3167079612446777365_n.jpg');
-    }
-    100% {
-        background-image: url('img/IMG_1997.jpg');
-    }
-    /*dsadsa*/
-    25% {
-        background-image: url('img/506752542_1027334406179959_5757960014923401273_n.jpg');
-    }
-    50% {
-        background-image: url('img/506132419_1027331596180240_9042813383854817158_n.jpg');
-    }
-    75% {
-        background-image: url('img/IMG_5081.jpg');
-    }
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Main Container for the Form */

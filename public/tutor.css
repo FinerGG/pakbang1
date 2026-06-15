@@ -63,6 +63,20 @@ body::before {
     }
 }
 
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* Main Container for the Form */
 .container {
     margin-top: auto;
