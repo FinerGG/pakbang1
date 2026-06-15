@@ -42,14 +42,20 @@ body::before {
 .logo-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .logo {
+    width: 100px;
+    height: 100px;
     max-width: 100px;
-    height: auto;
+    max-height: 100px;
+    object-fit: contain;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: block;
 }
 
 /* Main Container for the Form */
